@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'eat.apps.EatConfig',
+    'public.apps.PublicConfig',
     'rest_framework',
 ]
 
