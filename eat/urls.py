@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = {
     path('accounts/profile/', views.ProfileView.as_view()),
+    path('api/menu/', views.MenuView.as_view()),
 }
 
 urlpatterns = format_suffix_patterns(urlpatterns)

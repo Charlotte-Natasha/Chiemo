@@ -3,6 +3,8 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework import generics
+from .serializers import *
 
 # Create your views here.
 class ProfileView(APIView):
@@ -16,4 +18,8 @@ class ProfileView(APIView):
         }
         return Response(content)
 
-        
+class MenuView(generics.ListCreateAPIView):
+
+    serializer_class = MenuSerializer
+
+    queryset = Menu.objects.all()       
