@@ -1,5 +1,8 @@
 from django.db import models
 
+def upload_path(instance, filename):
+    return '/'.join(['images', str(instance.menu), filename])
+
 # Create your models here.
 class Menu(models.Model):
     image = models.ImageField(upload_to='menu', blank=True, null=True)
