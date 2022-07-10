@@ -4,7 +4,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import generics
-from django.http import HTTPResponse
+from django.http import HttpResponse
 from .serializers import *
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
@@ -51,4 +51,4 @@ class MenuView(generics.ListCreateAPIView):
         name = request.data['name']   
         image = request.data['image'] 
         Menu.objects.create(name=name, image=image) 
-        return HTTPResponse({'message': 'Menu uploaded'}, status=200)
+        return HttpResponse({'message': 'Menu uploaded'}, status=200)
