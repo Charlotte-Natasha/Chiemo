@@ -26,7 +26,7 @@ SECRET_KEY = 'DB_PASSWORD'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -48,12 +48,10 @@ INSTALLED_APPS = [
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:4200',
-    "http://127.0.0.1:4200",
 )
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",
-    "http://127.0.0.1:4200",
 ]
 
 MIDDLEWARE = [
