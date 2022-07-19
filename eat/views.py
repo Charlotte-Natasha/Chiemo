@@ -52,3 +52,9 @@ class MenuView(generics.ListCreateAPIView):
         image = request.data['image'] 
         Menu.objects.create(name=name, image=image) 
         return HttpResponse({'message': 'Menu uploaded'}, status=200)
+
+class CategoryView(generics.ListCreateAPIView):
+
+    serializer_class = CategorySerializer
+
+    queryset = Category.objects.all()        
